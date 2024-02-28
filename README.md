@@ -1,3 +1,9 @@
+# NOTE
+
+Based on [awesometic/realtek-r8125-dkms](https://github.com/awesometic/realtek-r8125-dkms), enable multi TX queue, enable RSS support, and disable ASPM. PVE 8 need to install `pve-headers` and `dkms` before installing `realtek-r8125-dkms`.
+
+基于[awesometic/realtek-r8125-dkms](https://github.com/awesometic/realtek-r8125-dkms)修改，启用TX多队列，启用RSS，禁用ASPM。PVE8用户在安装`realtek-r8125-dkms`前需要先安装`pve-headers`和`dkms`。
+
 # Realtek r8125 DKMS
 
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/awesometic/realtek-r8125-dkms?sort=semver&style=for-the-badge)
@@ -119,7 +125,7 @@ Finally, reboot to take effect.
 You can build yourself this after installing some dependencies including `dkms`.
 
 ```bash
-sudo apt install devscripts debmake debhelper build-essential dkms
+sudo apt install debmake debhelper dkms dh-dkms
 ```
 
 ```bash
